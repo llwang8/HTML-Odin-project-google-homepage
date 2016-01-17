@@ -1,68 +1,62 @@
 <!DOCTYPE html>
+<html>
 <head>
-	<style>
-		.topnav {
-		 	float:right;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-		}
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			background-color: #f1f1f1;
-		}
-		li a  {
-			display: inline;
-			padding: 14px;
-			text-decoration: none;
-
-		} 
-		.active {
-			color: #4caf50;
-		}
-
-	</style>
+	<title>The Google Homepage</title>
+	<script src="js/jquery.js"></script>
+	 <link rel="stylesheet" href="style/style.css">
 </head>
-
-
 <body>
+	<div class="container">
+		<div class="header">
+			<ul class="nav">
+				<li><a href="#">+li</a></li>
+				<li><a href="#">Gmail</a></li>
+				<li><a href="#">Images</a></li>
+				<li><a href="#" class="apps"></a></li>
+				<li><a href="#" class="bell"></a></li>
+				<li><a href="#" class="share">Share</a></li>
+				<li><a href="#" class="face"></a></li>
+			</ul>
+		</div>
 
-	<div id="header">
-		<ul class="topnav">
-			<li><a href="#">User</a></li>
-			<li><a href="#">Gmail</a></li>
-			<li><a href="#">Images</a></li>
-			<li><a href="#">GoogleTools</a></li>
-			<li><a href="#">Share</a></li>
-			<li><a href="#">pic</a></li>
-		</ul>
-	</div>
-	<br><br><br>
-	<div id="google-image" align="center">
-			<img src="gimage-3.jpg" width=220px height=300px> 
-			<input type="text" width=100%><br>
-			<div>
-				<input type="button" value="Google Search">
-		 		<input type="button" value="I'm feeling lucky.">
-    		</div>		 
-    </div>
+		<div class="cf"></div>
+		<div class="google-search" >
+			<center>
+				<img src="images/google.png" alt="google">
+				<form action="POST">
+					<div class="search-bar"> 
+						<div class="mic"><img src="images/mic.gif" alt=""></div>
+						<input type="text" name="search"><br>
+					</div>
+					<div class="cf"></div>	
+					<input class="search" type="submit" value="Google Search">
+		 			<input class="lucky" type="submit" value="I'm feeling lucky.">
+    			</form>
+    		</center>	 
+   		 </div>
 
-    <div class="footer">
-    	<ul>
-    		<li><a href="#">Advertising</a></li>
-    		<li><a href="#">Business</a></li>
-    		<li><a href="#">About</a></li>
-    		<ul style="float:right;list-style-type:none">
-    			<li><a class="active" href="#">Privacy</a></li>
-    			<li><a href="#">Terms</a></li>
+    	<footer>
+    		<ul class="footer-left">
+    			<li><a href="#" class="name">Advertising</a></li>
+    			<li><a href="#" class="mail">Business</a></li>
+    			<li><a href="#" class="images">About</a></li>
+    		</ul>
+    		<ul class="footer-right">
+    			<li><a href="#">Privacy &amp; Terms</a></li>
     			<li><a href="#">Settings</a</li>
     		</ul>
-    	</ul>
-    </div>
+    	</footer>
+
+	</div>
+
+<script type="text/javascript">
+    	$('input[type=text]').focus(function() {
+    		$('.mic').css('border-color', '#4285f4');
+    	}).blur(function(){
+    		$('.mic').css('border-color', '#DCDCDC');
+    	});
+</script>
+
 
 </body>
 
